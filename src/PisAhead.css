@@ -1,0 +1,23 @@
+.currentPi{
+    color: yellow;
+    border-color: yellow;
+    font-weight: bold;
+}
+.borders{
+    border: solid 1px grey;
+}
+
+.iter1{
+
+    color: green;
+}
+
+.text_center{
+    text-align: center;
+}
+.iter2{
+    color: orange;
+}
+.iter3{
+    color: red;
+}

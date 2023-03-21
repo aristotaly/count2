@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import PiCounter from "./PiCounter";
+import PisAhead from "./PisAhead";
+import branches from './pi_branch'
+import {calculatePIs,currentPIandIteration,getPisAhead,PIsToArray} from './Helper';
+const PIs = calculatePIs();
+const list =PIsToArray(branches);
+const calculatedPIandIteration = currentPIandIteration(PIs);
+const currentPI = calculatedPIandIteration.currentPI;
+const currentIteration = calculatedPIandIteration.currentIteration;
+const daystotheendoftheiteration = calculatedPIandIteration.daystotheendoftheiteration;
+const PI_before= 4;
+const pis_after=9;
+
 
 function App() {
+  console.log(list);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+     <PisAhead currentPI={currentPI} after={pis_after} before={PI_before} currentIterationDaysLeft={daystotheendoftheiteration} currentIteration={currentIteration} PisAhead={getPisAhead}/>
     </div>
   );
 }
